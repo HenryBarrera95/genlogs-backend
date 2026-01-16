@@ -24,8 +24,8 @@ def get_carriers_for_route(origin: str, destination: str):
     normalized_origin = normalize_city(origin)
     normalized_destination = normalize_city(destination)
 
-    if normalized_origin == "new york" and normalized_destination == "washington dc":
+    if "new york" in normalized_origin and "washington" in normalized_destination:
         return ROUTES["nyc_dc"]
-    if normalized_origin == "san francisco" and normalized_destination == "los angeles":
+    if "san francisco" in normalized_origin and "los angeles" in normalized_destination:
         return ROUTES["sf_la"]
     return ROUTES["other"]
